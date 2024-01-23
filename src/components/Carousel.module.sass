@@ -1,0 +1,103 @@
+@import '../colors.module'
+.circle 
+  height: 530px
+  width: 530px
+  border: 1px solid rgba(66, 86, 122, 0.2)
+  border-radius: 100%
+  // opacity: 0.2
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+  z-index: 1000
+
+.dot
+  position: fixed
+  height: 6px
+  width: 6px
+  border-radius: 50%
+  background-color: $BlackBlue
+  cursor: pointer
+  display: flex
+  align-items: center
+  justify-content: center
+  color: $BlackBlue
+  font-family: 'PT Sans'
+  font-size: 20px
+  font-weight: normal
+
+  .number
+    display: none
+  .title
+    display: block
+    position: absolute
+    opacity: 0
+
+  &_active
+    // position: relative
+    // position: absolute
+    height: 56px
+    width: 56px
+    // border-radius: 50%
+    background: $White
+    border: 1px solid #303E5880
+
+    .number
+      display: block
+      // position: relative
+    .title
+      opacity: 1
+      display: block
+      font-weight: bold
+      transform: translateX(76px)
+      // right: -20px
+
+.text
+  z-index: 10
+  display: flex
+  min-width: 973px
+  // text-align: center
+  position: absolute
+  font-family: "PT Sans"
+  font-size: 200px
+  font-style: normal
+  font-weight: 700
+  line-height: 80%
+  letter-spacing: -4px
+  justify-content: space-between
+  transform: translateX(-20px)
+
+  &_left
+    color: $Iris100
+  &_right
+    color: $Fuschia100
+
+.control_container
+  width: 120px
+  height: 88px
+  display: flex
+  flex-direction: column
+  gap: 20px
+  // top: 0
+  align-self: flex-start
+  margin-left: 78px
+  // position: absolute
+  
+  &_pagination
+    color: $BlackBlue
+    font-family: "PT Sans"
+    font-size: 14px
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+
+  &_buttons
+    display: flex
+    gap: 20px
+    cursor: pointer
+
+  &_control_button
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    border: 1px solid $BlackBlue
