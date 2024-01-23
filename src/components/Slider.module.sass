@@ -1,0 +1,45 @@
+.slider
+  top: 50px
+  position: relative
+  padding-left: 78px
+  padding-right: 50px
+  width: 100%
+    
+  @media (max-width: 480px)
+    // bottom: 0
+    top: 20%
+    padding: 0
+    // position: absolute
+
+
+  &_button_right, &_button_left
+    width: 40px
+    height: 40px
+    background-color: #FFF
+    box-shadow: 0px 0px 15px rgba(56, 119, 238, 0.10)
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    cursor: pointer
+    z-index: 1000
+
+  &_button_right
+    top: 50%
+    right: 40px
+    @media (max-width: 480px)
+      display: none
+    
+  &_button_left
+    top: 50%
+    left: 10px
+    transform: scale(-1, 1)
+    @media (max-width: 480px)
+      display: none
+
+  .button_disabled
+    opacity: 0
+
+.next
+  opacity: 0.5
